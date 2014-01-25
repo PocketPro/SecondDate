@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB8EBEEE189457EE00838F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEED189457EE00838F6B /* Foundation.framework */; };
+		BB8EBEF0189457EE00838F6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */; };
+		BB8EBEF2189457EE00838F6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEF1189457EE00838F6B /* UIKit.framework */; };
+		BB8EBEF4189457EE00838F6B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEF3189457EE00838F6B /* CoreData.framework */; };
+		BB8EBEFA189457EE00838F6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8EBEF8189457EE00838F6B /* InfoPlist.strings */; };
+		BB8EBEFC189457EE00838F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8EBEFB189457EE00838F6B /* main.m */; };
+		BB8EBF00189457EE00838F6B /* SDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8EBEFF189457EE00838F6B /* SDAppDelegate.m */; };
+		BB8EBF03189457EE00838F6B /* seconddate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB8EBF01189457EE00838F6B /* seconddate.xcdatamodeld */; };
+		BB8EBF05189457EE00838F6B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8EBF04189457EE00838F6B /* Images.xcassets */; };
+		BB8EBF0C189457EE00838F6B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF0B189457EE00838F6B /* XCTest.framework */; };
+		BB8EBF0D189457EE00838F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEED189457EE00838F6B /* Foundation.framework */; };
+		BB8EBF0E189457EE00838F6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEF1189457EE00838F6B /* UIKit.framework */; };
+		BB8EBF0F189457EE00838F6B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEF3189457EE00838F6B /* CoreData.framework */; };
+		BB8EBF17189457EE00838F6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8EBF15189457EE00838F6B /* InfoPlist.strings */; };
+		BB8EBF19189457EE00838F6B /* seconddateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8EBF18189457EE00838F6B /* seconddateTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB8EBF10189457EE00838F6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB8EBEE2189457EE00838F6B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB8EBEE9189457EE00838F6B;
+			remoteInfo = seconddate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB8EBEEA189457EE00838F6B /* seconddate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seconddate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8EBEED189457EE00838F6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BB8EBEF1189457EE00838F6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB8EBEF3189457EE00838F6B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BB8EBEF7189457EE00838F6B /* seconddate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "seconddate-Info.plist"; sourceTree = "<group>"; };
+		BB8EBEF9189457EE00838F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB8EBEFB189457EE00838F6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB8EBEFD189457EE00838F6B /* seconddate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "seconddate-Prefix.pch"; sourceTree = "<group>"; };
+		BB8EBEFE189457EE00838F6B /* SDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAppDelegate.h; sourceTree = "<group>"; };
+		BB8EBEFF189457EE00838F6B /* SDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAppDelegate.m; sourceTree = "<group>"; };
+		BB8EBF02189457EE00838F6B /* seconddate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = seconddate.xcdatamodel; sourceTree = "<group>"; };
+		BB8EBF04189457EE00838F6B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BB8EBF0A189457EE00838F6B /* seconddateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seconddateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8EBF0B189457EE00838F6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BB8EBF14189457EE00838F6B /* seconddateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "seconddateTests-Info.plist"; sourceTree = "<group>"; };
+		BB8EBF16189457EE00838F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB8EBF18189457EE00838F6B /* seconddateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = seconddateTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB8EBEE7189457EE00838F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8EBEF0189457EE00838F6B /* CoreGraphics.framework in Frameworks */,
+				BB8EBEF4189457EE00838F6B /* CoreData.framework in Frameworks */,
+				BB8EBEF2189457EE00838F6B /* UIKit.framework in Frameworks */,
+				BB8EBEEE189457EE00838F6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8EBF07189457EE00838F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8EBF0C189457EE00838F6B /* XCTest.framework in Frameworks */,
+				BB8EBF0F189457EE00838F6B /* CoreData.framework in Frameworks */,
+				BB8EBF0E189457EE00838F6B /* UIKit.framework in Frameworks */,
+				BB8EBF0D189457EE00838F6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB8EBEE1189457EE00838F6B = {
+			isa = PBXGroup;
+			children = (
+				BB8EBEF5189457EE00838F6B /* seconddate */,
+				BB8EBF12189457EE00838F6B /* seconddateTests */,
+				BB8EBEEC189457EE00838F6B /* Frameworks */,
+				BB8EBEEB189457EE00838F6B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB8EBEEB189457EE00838F6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EBEEA189457EE00838F6B /* seconddate.app */,
+				BB8EBF0A189457EE00838F6B /* seconddateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB8EBEEC189457EE00838F6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EBEED189457EE00838F6B /* Foundation.framework */,
+				BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */,
+				BB8EBEF1189457EE00838F6B /* UIKit.framework */,
+				BB8EBEF3189457EE00838F6B /* CoreData.framework */,
+				BB8EBF0B189457EE00838F6B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB8EBEF5189457EE00838F6B /* seconddate */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EBEFE189457EE00838F6B /* SDAppDelegate.h */,
+				BB8EBEFF189457EE00838F6B /* SDAppDelegate.m */,
+				BB8EBF04189457EE00838F6B /* Images.xcassets */,
+				BB8EBF01189457EE00838F6B /* seconddate.xcdatamodeld */,
+				BB8EBEF6189457EE00838F6B /* Supporting Files */,
+			);
+			path = seconddate;
+			sourceTree = "<group>";
+		};
+		BB8EBEF6189457EE00838F6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EBEF7189457EE00838F6B /* seconddate-Info.plist */,
+				BB8EBEF8189457EE00838F6B /* InfoPlist.strings */,
+				BB8EBEFB189457EE00838F6B /* main.m */,
+				BB8EBEFD189457EE00838F6B /* seconddate-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB8EBF12189457EE00838F6B /* seconddateTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EBF18189457EE00838F6B /* seconddateTests.m */,
+				BB8EBF13189457EE00838F6B /* Supporting Files */,
+			);
+			path = seconddateTests;
+			sourceTree = "<group>";
+		};
+		BB8EBF13189457EE00838F6B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB8EBF14189457EE00838F6B /* seconddateTests-Info.plist */,
+				BB8EBF15189457EE00838F6B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB8EBEE9189457EE00838F6B /* seconddate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8EBF1C189457EE00838F6B /* Build configuration list for PBXNativeTarget "seconddate" */;
+			buildPhases = (
+				BB8EBEE6189457EE00838F6B /* Sources */,
+				BB8EBEE7189457EE00838F6B /* Frameworks */,
+				BB8EBEE8189457EE00838F6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = seconddate;
+			productName = seconddate;
+			productReference = BB8EBEEA189457EE00838F6B /* seconddate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB8EBF09189457EE00838F6B /* seconddateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB8EBF1F189457EE00838F6B /* Build configuration list for PBXNativeTarget "seconddateTests" */;
+			buildPhases = (
+				BB8EBF06189457EE00838F6B /* Sources */,
+				BB8EBF07189457EE00838F6B /* Frameworks */,
+				BB8EBF08189457EE00838F6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB8EBF11189457EE00838F6B /* PBXTargetDependency */,
+			);
+			name = seconddateTests;
+			productName = seconddateTests;
+			productReference = BB8EBF0A189457EE00838F6B /* seconddateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB8EBEE2189457EE00838F6B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SD;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = WTLP;
+				TargetAttributes = {
+					BB8EBF09189457EE00838F6B = {
+						TestTargetID = BB8EBEE9189457EE00838F6B;
+					};
+				};
+			};
+			buildConfigurationList = BB8EBEE5189457EE00838F6B /* Build configuration list for PBXProject "seconddate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BB8EBEE1189457EE00838F6B;
+			productRefGroup = BB8EBEEB189457EE00838F6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB8EBEE9189457EE00838F6B /* seconddate */,
+				BB8EBF09189457EE00838F6B /* seconddateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB8EBEE8189457EE00838F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8EBEFA189457EE00838F6B /* InfoPlist.strings in Resources */,
+				BB8EBF05189457EE00838F6B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8EBF08189457EE00838F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8EBF17189457EE00838F6B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB8EBEE6189457EE00838F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8EBF03189457EE00838F6B /* seconddate.xcdatamodeld in Sources */,
+				BB8EBEFC189457EE00838F6B /* main.m in Sources */,
+				BB8EBF00189457EE00838F6B /* SDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8EBF06189457EE00838F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8EBF19189457EE00838F6B /* seconddateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB8EBF11189457EE00838F6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB8EBEE9189457EE00838F6B /* seconddate */;
+			targetProxy = BB8EBF10189457EE00838F6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB8EBEF8189457EE00838F6B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8EBEF9189457EE00838F6B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB8EBF15189457EE00838F6B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8EBF16189457EE00838F6B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB8EBF1A189457EE00838F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB8EBF1B189457EE00838F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB8EBF1D189457EE00838F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "seconddate/seconddate-Prefix.pch";
+				INFOPLIST_FILE = "seconddate/seconddate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BB8EBF1E189457EE00838F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "seconddate/seconddate-Prefix.pch";
+				INFOPLIST_FILE = "seconddate/seconddate-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BB8EBF20189457EE00838F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/seconddate.app/seconddate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "seconddate/seconddate-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "seconddateTests/seconddateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BB8EBF21189457EE00838F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/seconddate.app/seconddate";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "seconddate/seconddate-Prefix.pch";
+				INFOPLIST_FILE = "seconddateTests/seconddateTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB8EBEE5189457EE00838F6B /* Build configuration list for PBXProject "seconddate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8EBF1A189457EE00838F6B /* Debug */,
+				BB8EBF1B189457EE00838F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB8EBF1C189457EE00838F6B /* Build configuration list for PBXNativeTarget "seconddate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8EBF1D189457EE00838F6B /* Debug */,
+				BB8EBF1E189457EE00838F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB8EBF1F189457EE00838F6B /* Build configuration list for PBXNativeTarget "seconddateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8EBF20189457EE00838F6B /* Debug */,
+				BB8EBF21189457EE00838F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BB8EBF01189457EE00838F6B /* seconddate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BB8EBF02189457EE00838F6B /* seconddate.xcdatamodel */,
+			);
+			currentVersion = BB8EBF02189457EE00838F6B /* seconddate.xcdatamodel */;
+			path = seconddate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BB8EBEE2189457EE00838F6B /* Project object */;
+}
