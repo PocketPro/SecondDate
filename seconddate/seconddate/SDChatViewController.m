@@ -2,91 +2,120 @@
 //  SDChatViewController.m
 //  seconddate
 //
-//  Created by Eytan Moudahi on 1/26/2014.
+//  Created by Eytan Moudahi on 1/29/2014.
 //  Copyright (c) 2014 WTLP. All rights reserved.
 //
 
 #import "SDChatViewController.h"
-#import "SDMessage.h"
+#import "SDMessagesTableViewController.h"
 
 @interface SDChatViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet UIView *messageControlView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageControlViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageControlViewBottomConstraint;
+@property (weak, nonatomic) SDMessagesTableViewController *messagesViewController;
 @end
 
 @implementation SDChatViewController
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (void)viewDidLoad
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        // This table displays items in the Todo class
-        self.parseClassName = @"Todo";
-        self.pullToRefreshEnabled = YES;
-        self.paginationEnabled = NO;
-        self.objectsPerPage = 25;
-    }
-    return self;
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
 
-- (PFQuery *)queryForTable
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Construct a compound query for any message containing the current user. In an actual application, we'll be looking for messages between the recipient and the current user.
-    PFQuery *queryRecipient = [PFQuery queryWithClassName:NSStringFromClass([SDMessage class])];
-    [queryRecipient whereKey:@"recipientUsername" equalTo:[[PFUser currentUser] username]];
-    [queryRecipient whereKey:@"senderUsername" equalTo:self.recipientUsername];
-    
-    PFQuery *querySender = [PFQuery queryWithClassName:NSStringFromClass([SDMessage class])];
-    [querySender whereKey:@"recipientUsername" equalTo:self.recipientUsername];
-    [querySender whereKey:@"senderUsername" equalTo:[[PFUser currentUser] username]];
-    
-    PFQuery *query = [PFQuery orQueryWithSubqueries:@[queryRecipient,querySender]];
-    
-    if ([self.objects count] == 0) {
-        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    }
-    
-    [query orderByDescending:@"createdAt"];
-    
-    return query;
-}
-
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
-{
-    static NSString *messageIdentifier = @"messageIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:messageIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:messageIdentifier];
-    }
-    
-    cell.textLabel.text = [object objectForKey:@"body"];
-    return cell;
-}
-
-- (NSString*)recipientUsername
-{
-    if (!_recipientUsername) {
-        // TODO: For testing purposes assume the recipient is the current user. Yes, we sending messages to ourself.
-        _recipientUsername = [[PFUser currentUser] username];
-    }
-    return _recipientUsername;
-}
-
-- (IBAction)sendMessageButtonClicked:(id)sender {
-    SDMessage *message = [[SDMessage alloc] init];
-    message.body = @"It worked!";
-    message.senderUsername = [[PFUser currentUser] username];
-    message.recipientUsername = self.recipientUsername;
-    
-    NSError *error = nil;
-    if ([message sendMessage:&error] == FALSE){
-        NSLog(@"Error: %@", [error localizedDescription]);
+    if ([segue.identifier isEqualToString:@"embedSegue"]) {
+        self.messagesViewController = segue.destinationViewController;
+        self.messagesViewController.otherUsername = [[PFUser currentUser] username];
+        self.messagesViewController.currentUsername = [[PFUser currentUser] username];
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (IBAction)sendButtonClicked:(id)sender {
+    [self.messagesViewController sendMessageWithBody:self.messageTextField.text];
+}
+
+/*
+// Each notification includes a nil object and a userInfo dictionary containing the
+// begining and ending keyboard frame in screen coordinates. Use the various UIView and
+// UIWindow convertRect facilities to get the frame in the desired coordinate system.
+// Animation key/value pairs are only available for the "will" family of notification.
+UIKIT_EXTERN NSString *const UIKeyboardWillShowNotification;
+UIKIT_EXTERN NSString *const UIKeyboardDidShowNotification;
+UIKIT_EXTERN NSString *const UIKeyboardWillHideNotification;
+UIKIT_EXTERN NSString *const UIKeyboardDidHideNotification;
+
+UIKIT_EXTERN NSString *const UIKeyboardFrameBeginUserInfoKey        NS_AVAILABLE_IOS(3_2); // NSValue of CGRect
+UIKIT_EXTERN NSString *const UIKeyboardFrameEndUserInfoKey          NS_AVAILABLE_IOS(3_2); // NSValue of CGRect
+UIKIT_EXTERN NSString *const UIKeyboardAnimationDurationUserInfoKey NS_AVAILABLE_IOS(3_0); // NSNumber of double
+UIKIT_EXTERN NSString *const UIKeyboardAnimationCurveUserInfoKey    NS_AVAILABLE_IOS(3_0); // NSNumber of NSUInteger (UIViewAnimationCurve)
+
+// Like the standard keyboard notifications above, these additional notifications include
+// a nil object and begin/end frames of the keyboard in screen coordinates in the userInfo dictionary.
+UIKIT_EXTERN NSString *const UIKeyboardWillChangeFrameNotification  NS_AVAILABLE_IOS(5_0);
+UIKIT_EXTERN NSString *const UIKeyboardDidChangeFrameNotification   NS_AVAILABLE_IOS(5_0);
+
+// These keys are superseded by UIKeyboardFrameBeginUserInfoKey and UIKeyboardFrameEndUserInfoKey.
+UIKIT_EXTERN NSString *const UIKeyboardCenterBeginUserInfoKey   NS_DEPRECATED_IOS(2_0, 3_2);
+UIKIT_EXTERN NSString *const UIKeyboardCenterEndUserInfoKey     NS_DEPRECATED_IOS(2_0, 3_2);
+UIKIT_EXTERN NSString *const UIKeyboardBoundsUserInfoKey        NS_DEPRECATED_IOS(2_0, 3_2);
+*/
+
+- (void)keyboardWillShow:(NSNotification*)notification
 {
-    [super viewWillAppear:animated];
-    [self loadObjects];
+    // Animate the control view
+    
+    CGFloat duration = [[notification userInfo][UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    UIViewAnimationCurve animationCurve = [[notification userInfo][UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    CGRect keyboardFrame = [[notification userInfo][UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    // Convert the animationCurve to the proper index into UIViewAnimationOptionCurve[type]
+    UIViewAnimationOptions curveOption = (animationCurve - UIViewAnimationCurveEaseInOut) << 16;
+
+    // Update the constraints
+        self.messageControlViewBottomConstraint.constant = CGRectGetHeight(keyboardFrame);
+    
+    [UIView animateWithDuration:duration delay:0 options:curveOption animations:^{
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
+
+- (void)keyboardDidShow:(NSNotification*)notification
+{
+    
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification
+{
+    CGFloat duration = [[notification userInfo][UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    UIViewAnimationCurve animationCurve = [[notification userInfo][UIKeyboardAnimationCurveUserInfoKey] integerValue];
+    
+    // Convert the animationCurve to the proper index into UIViewAnimationOptionCurve[type]
+    UIViewAnimationOptions curveOption = (animationCurve - UIViewAnimationCurveEaseInOut) << 16;
+    
+    // Update the constraints
+    self.messageControlViewBottomConstraint.constant = 0;
+    
+    [UIView animateWithDuration:duration delay:0 options:curveOption animations:^{
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)keyboardDidHide:(NSNotification*)notification
+{
+    
 }
 
 @end

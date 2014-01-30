@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BB5E80DE18955737006386F3 /* SDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5E80DD18955737006386F3 /* SDMessage.m */; };
 		BB5E80E01895598D006386F3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5E80DF1895598D006386F3 /* Storyboard.storyboard */; };
-		BB5E80E318955B40006386F3 /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5E80E218955B40006386F3 /* SDChatViewController.m */; };
+		BB5E80E318955B40006386F3 /* SDMessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5E80E218955B40006386F3 /* SDMessagesTableViewController.m */; };
 		BB5E80E5189560AC006386F3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5E80E4189560AC006386F3 /* FacebookSDK.framework */; };
 		BB8EBEEE189457EE00838F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEED189457EE00838F6B /* Foundation.framework */; };
 		BB8EBEF0189457EE00838F6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */; };
@@ -36,6 +36,7 @@
 		BB8EBF311894653700838F6B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF301894653700838F6B /* Security.framework */; };
 		BB8EBF331894653D00838F6B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF321894653D00838F6B /* StoreKit.framework */; };
 		BB8EBF351894654500838F6B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF341894654500838F6B /* SystemConfiguration.framework */; };
+		BB9420CF1899E3D50002025B /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB9420CE1899E3D50002025B /* SDChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,8 @@
 		BB5E80DC18955737006386F3 /* SDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMessage.h; sourceTree = "<group>"; };
 		BB5E80DD18955737006386F3 /* SDMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMessage.m; sourceTree = "<group>"; };
 		BB5E80DF1895598D006386F3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		BB5E80E118955B40006386F3 /* SDChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatViewController.h; sourceTree = "<group>"; };
-		BB5E80E218955B40006386F3 /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
+		BB5E80E118955B40006386F3 /* SDMessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMessagesTableViewController.h; sourceTree = "<group>"; };
+		BB5E80E218955B40006386F3 /* SDMessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMessagesTableViewController.m; sourceTree = "<group>"; };
 		BB5E80E4189560AC006386F3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		BB8EBEEA189457EE00838F6B /* seconddate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seconddate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8EBEED189457EE00838F6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +84,8 @@
 		BB8EBF301894653700838F6B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BB8EBF321894653D00838F6B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BB8EBF341894654500838F6B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BB9420CD1899E3D50002025B /* SDChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatViewController.h; sourceTree = "<group>"; };
+		BB9420CE1899E3D50002025B /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +176,10 @@
 				BB8EBF01189457EE00838F6B /* seconddate.xcdatamodeld */,
 				BB5E80DC18955737006386F3 /* SDMessage.h */,
 				BB5E80DD18955737006386F3 /* SDMessage.m */,
-				BB5E80E118955B40006386F3 /* SDChatViewController.h */,
-				BB5E80E218955B40006386F3 /* SDChatViewController.m */,
+				BB5E80E118955B40006386F3 /* SDMessagesTableViewController.h */,
+				BB5E80E218955B40006386F3 /* SDMessagesTableViewController.m */,
+				BB9420CD1899E3D50002025B /* SDChatViewController.h */,
+				BB9420CE1899E3D50002025B /* SDChatViewController.m */,
 				BB5E80DF1895598D006386F3 /* Storyboard.storyboard */,
 				BB8EBEF6189457EE00838F6B /* Supporting Files */,
 			);
@@ -307,7 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB5E80E318955B40006386F3 /* SDChatViewController.m in Sources */,
+				BB5E80E318955B40006386F3 /* SDMessagesTableViewController.m in Sources */,
+				BB9420CF1899E3D50002025B /* SDChatViewController.m in Sources */,
 				BB8EBF03189457EE00838F6B /* seconddate.xcdatamodeld in Sources */,
 				BB8EBEFC189457EE00838F6B /* main.m in Sources */,
 				BB5E80DE18955737006386F3 /* SDMessage.m in Sources */,

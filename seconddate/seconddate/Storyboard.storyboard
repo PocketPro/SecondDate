@@ -51,7 +51,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="CPJ-BI-fts" kind="push" id="CY3-5o-cc8"/>
+                                            <segue destination="MVw-jd-PO2" kind="push" id="dlB-a4-pCJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SVH-mo-Ojy">
@@ -81,12 +81,104 @@
             <point key="canvasLocation" x="1081" y="523"/>
         </scene>
         <!--Chat View Controller-->
+        <scene sceneID="Ute-4q-PY8">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="MVw-jd-PO2" customClass="SDChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ftI-Xe-OYB"/>
+                        <viewControllerLayoutGuide type="bottom" id="E1h-VL-Atp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X5N-yd-IPl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxV-ka-5rE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="CPJ-BI-fts" kind="embed" identifier="embedSegue" id="v8W-ZP-cd3"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-Gq-gWt">
+                                <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Say something!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="re3-di-aef">
+                                        <rect key="frame" x="5" y="5" width="260" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN8-hZ-bir">
+                                        <rect key="frame" x="265" y="-1" width="55" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2wA-8q-xby"/>
+                                            <constraint firstAttribute="width" constant="55" id="b5G-aC-jt6"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonClicked:" destination="MVw-jd-PO2" eventType="touchUpInside" id="J1j-g3-2jp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="re3-di-aef" secondAttribute="bottom" constant="5" id="7hQ-jQ-dQm"/>
+                                    <constraint firstAttribute="bottom" secondItem="QN8-hZ-bir" secondAttribute="bottom" constant="1" id="Mun-Bd-5lI"/>
+                                    <constraint firstItem="re3-di-aef" firstAttribute="leading" secondItem="AEn-Gq-gWt" secondAttribute="leading" constant="5" id="P52-f5-35u"/>
+                                    <constraint firstAttribute="trailing" secondItem="QN8-hZ-bir" secondAttribute="trailing" id="S1P-57-vmm"/>
+                                    <constraint firstItem="re3-di-aef" firstAttribute="top" secondItem="AEn-Gq-gWt" secondAttribute="top" constant="5" id="YEq-re-dCu"/>
+                                    <constraint firstItem="QN8-hZ-bir" firstAttribute="leading" secondItem="re3-di-aef" secondAttribute="trailing" id="mhT-U4-Gmq"/>
+                                    <constraint firstAttribute="height" constant="40" id="pB8-P2-hlG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AEn-Gq-gWt" firstAttribute="top" secondItem="nxV-ka-5rE" secondAttribute="bottom" id="44j-XJ-8xC"/>
+                            <constraint firstItem="nxV-ka-5rE" firstAttribute="top" secondItem="X5N-yd-IPl" secondAttribute="top" id="FCn-cq-lsP"/>
+                            <constraint firstItem="nxV-ka-5rE" firstAttribute="leading" secondItem="X5N-yd-IPl" secondAttribute="leading" id="Mfk-Oq-eBn"/>
+                            <constraint firstItem="E1h-VL-Atp" firstAttribute="top" secondItem="AEn-Gq-gWt" secondAttribute="bottom" id="TDd-ri-nDC"/>
+                            <constraint firstAttribute="trailing" secondItem="nxV-ka-5rE" secondAttribute="trailing" id="UeU-Fv-yPC"/>
+                            <constraint firstItem="AEn-Gq-gWt" firstAttribute="leading" secondItem="X5N-yd-IPl" secondAttribute="leading" id="XS2-S1-umc"/>
+                            <constraint firstAttribute="trailing" secondItem="AEn-Gq-gWt" secondAttribute="trailing" id="py0-8V-e8E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Hf-za-xUC"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="messageControlView" destination="AEn-Gq-gWt" id="kEa-9l-RA4"/>
+                        <outlet property="messageControlViewBottomConstraint" destination="TDd-ri-nDC" id="F5K-5k-HZh"/>
+                        <outlet property="messageControlViewHeightConstraint" destination="pB8-P2-hlG" id="64u-Tf-ebp"/>
+                        <outlet property="messageTextField" destination="re3-di-aef" id="ngS-to-8Ik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJ9-8B-tMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1498" y="474"/>
+        </scene>
+        <!--Messages Table View Controller-->
         <scene sceneID="rt1-bk-NcS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xr6-Qd-LCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController hidesBottomBarWhenPushed="YES" id="CPJ-BI-fts" customClass="SDChatViewController" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="CPJ-BI-fts" customClass="SDMessagesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aAC-MW-c2K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -94,22 +186,14 @@
                             <outlet property="delegate" destination="CPJ-BI-fts" id="RVk-M3-IE4"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="xMf-Rm-oxl">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N0y-87-kf2">
-                            <rect key="frame" x="109" y="7" width="102" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Send Message">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="sendMessageButtonClicked:" destination="CPJ-BI-fts" eventType="touchUpInside" id="DG2-az-RXX"/>
-                            </connections>
-                        </button>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xr6-Qd-LCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1627" y="523"/>
+            <point key="canvasLocation" x="1994" y="556"/>
         </scene>
         <!--Navigation Controller - Chats-->
         <scene sceneID="4q3-UU-I19">
@@ -145,6 +229,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBE-qM-P6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="39" y="129"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cLx-qd-RRc">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="gXb-cv-bdm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n3N-Gx-WVj"/>
+                        <viewControllerLayoutGuide type="bottom" id="WuG-Cb-AiW"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fLx-Gq-iFN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMb-dM-adA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
