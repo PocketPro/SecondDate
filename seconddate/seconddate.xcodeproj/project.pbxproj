@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB5E80DE18955737006386F3 /* SDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5E80DD18955737006386F3 /* SDMessage.m */; };
+		BB5E80E01895598D006386F3 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5E80DF1895598D006386F3 /* Storyboard.storyboard */; };
+		BB5E80E318955B40006386F3 /* SDChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5E80E218955B40006386F3 /* SDChatViewController.m */; };
+		BB5E80E5189560AC006386F3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5E80E4189560AC006386F3 /* FacebookSDK.framework */; };
 		BB8EBEEE189457EE00838F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEED189457EE00838F6B /* Foundation.framework */; };
 		BB8EBEF0189457EE00838F6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */; };
 		BB8EBEF2189457EE00838F6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEF1189457EE00838F6B /* UIKit.framework */; };
@@ -22,6 +26,16 @@
 		BB8EBF0F189457EE00838F6B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBEF3189457EE00838F6B /* CoreData.framework */; };
 		BB8EBF17189457EE00838F6B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8EBF15189457EE00838F6B /* InfoPlist.strings */; };
 		BB8EBF19189457EE00838F6B /* seconddateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8EBF18189457EE00838F6B /* seconddateTests.m */; };
+		BB8EBF2318945F0C00838F6B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF2218945F0C00838F6B /* Parse.framework */; };
+		BB8EBF25189464FF00838F6B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF24189464FF00838F6B /* AudioToolbox.framework */; };
+		BB8EBF271894650D00838F6B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF261894650D00838F6B /* CFNetwork.framework */; };
+		BB8EBF291894651C00838F6B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF281894651C00838F6B /* CoreLocation.framework */; };
+		BB8EBF2B1894652300838F6B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF2A1894652300838F6B /* libz.dylib */; };
+		BB8EBF2D1894652A00838F6B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF2C1894652A00838F6B /* MobileCoreServices.framework */; };
+		BB8EBF2F1894653000838F6B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF2E1894653000838F6B /* QuartzCore.framework */; };
+		BB8EBF311894653700838F6B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF301894653700838F6B /* Security.framework */; };
+		BB8EBF331894653D00838F6B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF321894653D00838F6B /* StoreKit.framework */; };
+		BB8EBF351894654500838F6B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8EBF341894654500838F6B /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB5E80DC18955737006386F3 /* SDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMessage.h; sourceTree = "<group>"; };
+		BB5E80DD18955737006386F3 /* SDMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMessage.m; sourceTree = "<group>"; };
+		BB5E80DF1895598D006386F3 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		BB5E80E118955B40006386F3 /* SDChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDChatViewController.h; sourceTree = "<group>"; };
+		BB5E80E218955B40006386F3 /* SDChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDChatViewController.m; sourceTree = "<group>"; };
+		BB5E80E4189560AC006386F3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		BB8EBEEA189457EE00838F6B /* seconddate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seconddate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8EBEED189457EE00838F6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +73,16 @@
 		BB8EBF14189457EE00838F6B /* seconddateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "seconddateTests-Info.plist"; sourceTree = "<group>"; };
 		BB8EBF16189457EE00838F6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB8EBF18189457EE00838F6B /* seconddateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = seconddateTests.m; sourceTree = "<group>"; };
+		BB8EBF2218945F0C00838F6B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BB8EBF24189464FF00838F6B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BB8EBF261894650D00838F6B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BB8EBF281894651C00838F6B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BB8EBF2A1894652300838F6B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BB8EBF2C1894652A00838F6B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BB8EBF2E1894653000838F6B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BB8EBF301894653700838F6B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BB8EBF321894653D00838F6B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BB8EBF341894654500838F6B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +90,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8EBF351894654500838F6B /* SystemConfiguration.framework in Frameworks */,
+				BB8EBF331894653D00838F6B /* StoreKit.framework in Frameworks */,
+				BB8EBF311894653700838F6B /* Security.framework in Frameworks */,
+				BB8EBF2F1894653000838F6B /* QuartzCore.framework in Frameworks */,
+				BB8EBF2D1894652A00838F6B /* MobileCoreServices.framework in Frameworks */,
+				BB8EBF2B1894652300838F6B /* libz.dylib in Frameworks */,
+				BB8EBF291894651C00838F6B /* CoreLocation.framework in Frameworks */,
 				BB8EBEF0189457EE00838F6B /* CoreGraphics.framework in Frameworks */,
+				BB8EBF271894650D00838F6B /* CFNetwork.framework in Frameworks */,
+				BB8EBF25189464FF00838F6B /* AudioToolbox.framework in Frameworks */,
 				BB8EBEF4189457EE00838F6B /* CoreData.framework in Frameworks */,
+				BB5E80E5189560AC006386F3 /* FacebookSDK.framework in Frameworks */,
 				BB8EBEF2189457EE00838F6B /* UIKit.framework in Frameworks */,
 				BB8EBEEE189457EE00838F6B /* Foundation.framework in Frameworks */,
+				BB8EBF2318945F0C00838F6B /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +144,17 @@
 		BB8EBEEC189457EE00838F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB5E80E4189560AC006386F3 /* FacebookSDK.framework */,
+				BB8EBF341894654500838F6B /* SystemConfiguration.framework */,
+				BB8EBF321894653D00838F6B /* StoreKit.framework */,
+				BB8EBF301894653700838F6B /* Security.framework */,
+				BB8EBF2E1894653000838F6B /* QuartzCore.framework */,
+				BB8EBF2C1894652A00838F6B /* MobileCoreServices.framework */,
+				BB8EBF2A1894652300838F6B /* libz.dylib */,
+				BB8EBF281894651C00838F6B /* CoreLocation.framework */,
+				BB8EBF261894650D00838F6B /* CFNetwork.framework */,
+				BB8EBF24189464FF00838F6B /* AudioToolbox.framework */,
+				BB8EBF2218945F0C00838F6B /* Parse.framework */,
 				BB8EBEED189457EE00838F6B /* Foundation.framework */,
 				BB8EBEEF189457EE00838F6B /* CoreGraphics.framework */,
 				BB8EBEF1189457EE00838F6B /* UIKit.framework */,
@@ -119,6 +171,11 @@
 				BB8EBEFF189457EE00838F6B /* SDAppDelegate.m */,
 				BB8EBF04189457EE00838F6B /* Images.xcassets */,
 				BB8EBF01189457EE00838F6B /* seconddate.xcdatamodeld */,
+				BB5E80DC18955737006386F3 /* SDMessage.h */,
+				BB5E80DD18955737006386F3 /* SDMessage.m */,
+				BB5E80E118955B40006386F3 /* SDChatViewController.h */,
+				BB5E80E218955B40006386F3 /* SDChatViewController.m */,
+				BB5E80DF1895598D006386F3 /* Storyboard.storyboard */,
 				BB8EBEF6189457EE00838F6B /* Supporting Files */,
 			);
 			path = seconddate;
@@ -231,6 +288,7 @@
 			files = (
 				BB8EBEFA189457EE00838F6B /* InfoPlist.strings in Resources */,
 				BB8EBF05189457EE00838F6B /* Images.xcassets in Resources */,
+				BB5E80E01895598D006386F3 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5E80E318955B40006386F3 /* SDChatViewController.m in Sources */,
 				BB8EBF03189457EE00838F6B /* seconddate.xcdatamodeld in Sources */,
 				BB8EBEFC189457EE00838F6B /* main.m in Sources */,
+				BB5E80DE18955737006386F3 /* SDMessage.m in Sources */,
 				BB8EBF00189457EE00838F6B /* SDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,10 +432,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eytanmoudahi/Documents/Development/SecondDate/seconddate,
+					/Users/eytanmoudahi/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "seconddate/seconddate-Prefix.pch";
 				INFOPLIST_FILE = "seconddate/seconddate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "FB0CFD65-C89F-4186-9F8D-F861D0AB877D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -385,10 +451,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/eytanmoudahi/Documents/Development/SecondDate/seconddate,
+					/Users/eytanmoudahi/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "seconddate/seconddate-Prefix.pch";
 				INFOPLIST_FILE = "seconddate/seconddate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "FB0CFD65-C89F-4186-9F8D-F861D0AB877D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -454,6 +526,7 @@
 				BB8EBF1E189457EE00838F6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB8EBF1F189457EE00838F6B /* Build configuration list for PBXNativeTarget "seconddateTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +535,7 @@
 				BB8EBF21189457EE00838F6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
